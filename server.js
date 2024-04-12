@@ -24,14 +24,16 @@ if (process.env.NODE_ENV === "production") {
   // Serve static files from the "client/build" directory
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  // Route all other requests to the React app
+  // Handle React routing, return all requests to React app
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  });
+    console.log("hi");
+  })
+ 
 }
 
 // Start the server
-const PORT = process.env.PORT || 2424; // Use default port 5000 if not specified in .env
+const PORT = process.env.PORT || 2424; // Use default port 2424 if not specified in .env
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT} better go call me!`);
 });
