@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://Akua-Konadu:n5c7hFbNUJAaGyl4@portfoliowebsite.9udwuhy.mongodb.net/?retryWrites=true&w=majority&appName=portfoliowebsite", {
+    const conn = await mongoose.connect("mongodb://localhost:27017/myporfoliowebsites", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       // Other options can be added here if needed
