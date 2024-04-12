@@ -21,15 +21,12 @@ app.use("/api", portfolioRoute);
 // Serve React static files in production
 const path = require("path");
 if (process.env.NODE_ENV === "production") {
-  // Serve static files from the "client/build" directory
-  app.use(express.static(path.join(__dirname, "client/build")));
-
-  
- 
+	// Serve static files from the "client/build" directory
+	app.use(express.static(path.join(__dirname, "client/build")));
 }
 
 // Start the server
 const PORT = process.env.PORT || 2424; // Use default port 2424 if not specified in .env
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT} better go call me!`);
+	console.log(`Server is running on port ${PORT} better go catch me!`);
 });
